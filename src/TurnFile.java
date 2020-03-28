@@ -1,14 +1,13 @@
-/**
- *  Base on JDK : OpenJDK 14
- *  Creat By : JamesChang
- *  Creat Time: 2020-03-20 11:41
- *  File Description: 純文字檔轉碼
- */
 
 import static java.lang.System.out;
-
 import com.jc.file.JcFile;
 
+
+/**
+ *  純文字檔轉碼
+ *  @author   JamesChang
+ *  @since   2020-03-20 11:41 OpenJDK 11
+ */
 public class TurnFile {
 
     //已處理的檔案數

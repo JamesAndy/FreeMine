@@ -1,9 +1,3 @@
-/**
- *  Base on JDK : OpenJDK 14
- *  Creat By : JamesChang
- *  Creat Time: 2020-03-20111:41
- *  File Description: 檔案處理
- */
 package com.jc.file;
 
 
@@ -14,7 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+/**
+ *  File Description: 檔案處理
+ *  @author   JamesChang
+ *  @since   2020-03-20111:41 OpenJDK 14
+ */
 public class JcFile {
 
 
