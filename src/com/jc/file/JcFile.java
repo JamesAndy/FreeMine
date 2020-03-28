@@ -12,6 +12,7 @@ import org.mozilla.universalchardet.UniversalDetector;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class JcFile {
@@ -116,24 +117,26 @@ public class JcFile {
         if(keyWord == null){throw new Exception("The function searchFileContent param [keyWord] can't null ");}
 
         keyWord = keyWord.toUpperCase();
+        /*去除空格*/
         keyWord = keyWord.replaceAll("\\s*", "");
 
         boolean isFind = false;
 
         BufferedReader br = new BufferedReader( new InputStreamReader(new FileInputStream(filePath), fileCode));
 
-        String line = br.readLine();
-        while (line != null) {
+        List<String> lines ;
 
+        lines = br.lines().collect(Collectors.toList());
+
+        for (String line : lines) {
             line = line.toUpperCase();
+            /*去除空格*/
             line = line.replaceAll("\\s*", "");
 
             if(line.indexOf(keyWord.toUpperCase()) != -1){
                 isFind = true;
                 break;
             }
-
-            line = br.readLine();
         }
         return isFind;
     }
