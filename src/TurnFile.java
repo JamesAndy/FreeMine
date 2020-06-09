@@ -16,9 +16,9 @@ public class TurnFile {
     //參數設定:設定轉碼目標
     private final static String trunEncode = "UTF-8";
     //參數設定:起始目錄
-    private final static String startPath = "D:/Wezoomtek/ntpc/swjweb/";
+    private final static String startPath = "D:/Wezoomtek/ntpc/swjweb/web/jsp";
     //參數設定:篩選檔案
-    private final static String pFilter = ".java";
+    private final static String pFilter = ".jsp";
     //參數設定:取代路徑
     private final static String replacePath = "D:/Wezoomtek/ntpc/swjweb/";
     //參數設定:目的路徑
@@ -63,7 +63,7 @@ public class TurnFile {
 
 
                 //僅搜尋檔案內容
-                if(JcFile.searchFileContent(fileSourceDir,code,"sun.")){
+                if(JcFile.searchFileContent(fileSourceDir,code,"getfileFN")){
                     out.println(fileSourceDir);
                     trunFiles ++;
                 }

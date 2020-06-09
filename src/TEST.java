@@ -6,6 +6,7 @@
  * @since 2020/5/15上午 09:47
  **/
 
+import com.jc.tools.Strings;
 import security.SHA;
 
 /**
@@ -17,6 +18,6 @@ import security.SHA;
 public class TEST {
     public static void main(String[] args) throws Exception
     {
-        SHA.encode("1234");
+        System.out.println(Strings.chineseNumberUpper.get(1000));
     }
 }
