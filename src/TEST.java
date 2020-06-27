@@ -6,8 +6,11 @@
  * @since 2020/5/15上午 09:47
  **/
 
+import com.jc.tools.CheckId;
 import com.jc.tools.Strings;
 import security.SHA;
+
+import java.util.HashMap;
 
 /**
  * File Description/檔案描述:
@@ -18,6 +21,6 @@ import security.SHA;
 public class TEST {
     public static void main(String[] args) throws Exception
     {
-        System.out.println(Strings.chineseNumberUpper.get(1000));
+        System.out.println(com.jc.tools.CheckId.validateResident2("A990000013"));
     }
 }
