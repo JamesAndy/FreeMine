@@ -2,6 +2,7 @@ package com.jc.tools;
 
 import java.util.LinkedHashMap;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 /**
  * File Description/檔案描述: 字串常用工具
@@ -129,5 +130,23 @@ public class Strings {
         put(1000000,"M");
     }};
 
+    /**
+     * 判斷mail格式正確
+     * @param mail
+     * @return boolean
+     */
+    public boolean checkMail(String mail){
+        boolean returnValue;
+        /*
+         * \w{1,63} = 允許大小寫字母，數字和底線，至少1到63個字
+         * [a-zA-Z0-9]{2,63} = 允許大小寫字母和數字，至少2到63個字
+         * (\.[a-zA-Z]{2,63})? = 表示一個.後接至少2到63個大小寫字母，而問號?的意思表示括弧內的規則可以存在0個或1個
+         */
+        String regex = "^\\w{1,63}@[a-zA-Z0-9]{2,63}\\.[a-zA-Z]{2,63}(\\.[a-zA-Z]{2,63})?(\\.[a-zA-Z]{2,63})?$";
+
+        Pattern p = Pattern.compile(regex);
+        returnValue = p.matcher(mail).find();
+        return returnValue;
+    }
 
 }
